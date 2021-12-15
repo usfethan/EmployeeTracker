@@ -3,16 +3,15 @@ CREATE DATABASE employeetracker_db;
 
 USE employeetracker_db;
 
-DROP TABLE IF EXISTS department;
+
 CREATE TABLE department (
-    id INT NOT NULL,
-    name VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id)
+    id INT NOT NULL UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) UNIQUE NOT NULL,  
 );
 
-DROP TABLE IF EXISTS role;
+
 CREATE TABLE role (
-    id INT NOT NULL,
+    id INT NOT NULL UNSIGNED AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
     salary VARCHAR(30) NOT NULL,
     department_id INT NOT NULL,
@@ -21,9 +20,9 @@ CREATE TABLE role (
     REFERENCES department(id)
 );
 
-DROP TABLE IF EXISTS employee;
+
 CREATE TABLE employee (
-    id INT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INT NOT NULL,
