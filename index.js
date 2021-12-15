@@ -17,7 +17,11 @@ const db = mysql.createConnection(
         password: "Fn04061241*",
         database: "employeetracker_db",
     },
-    console.log("Connected to the database!")
+  console.log("***********************************"),
+  console.log("*                                 *"),
+  console.log("*        EMPLOYEE MANAGER         *"),
+  console.log("*                                 *"),
+  console.log("***********************************"),
 );
 
 
